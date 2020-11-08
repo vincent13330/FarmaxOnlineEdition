@@ -1,0 +1,15 @@
+<style>
+
+#welcomeMessage {
+	color: #0083FF;
+	font-size: 50px;
+	font-family: 'Rubik', sans-serif;
+	text-align: center;
+}
+</style>
+<link rel="import" href="style.css">
+
+<div id="welcomeMessage">Welcome <%= name %> !</div>
+<form action="/logout?_method=DELETE" method="POST">
+  <button type="submit">Log Out</button>
+</form>
