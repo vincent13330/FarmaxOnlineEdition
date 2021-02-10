@@ -21,7 +21,7 @@ var transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
 		user: 'FarmaxDev@gmail.com',
-		pass: '2vt8ufS7Jgd2io'
+		pass: 'è_é'
 	}
 })
 
@@ -346,7 +346,7 @@ app.delete('/logout', (req, res) => {
 })
 
 function checkAuthenticated(goRegister, req, res, next) {
-	console.log("jaaj")
+	console.log("ok1")
   	if (req.isAuthenticated()) {
     	return next()
   	}else if (goRegister === 1) {
@@ -357,26 +357,26 @@ function checkAuthenticated(goRegister, req, res, next) {
 }
 
 function checkNotAuthenticated(goRegister, req, res, next) {
-	console.log("jaaj2")
+	console.log("ok2")
   	if (req.isAuthenticated()) {
   		try {
 	  		if (req.user.verificationValide === 1) {
 	    		return res.redirect('/')
-	    		console.log("jaaj3")
+	    		console.log("ok3")
 	  		} else if (goRegister === 1) {
 	  			goRegister = 0;
 	  			return res.redirect('/register')
 	  		} else {
 	  			return res.redirect('/verification')
-	  			console.log("jaaj4")
+	  			console.log("ok4")
 	  		}
 	  	} catch {
 	  		if(goRegister === 1) {
 		  		return res.redirect('/register')
-		  		console.log("jaaj5")
+		  		console.log("ok5")
 		  	} else {
 		  		return res.redirect('/login')
-		  		console.log("jaaj6")
+		  		console.log("ok6")
 		  	}
 	  	}
   	}
