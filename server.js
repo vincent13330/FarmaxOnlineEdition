@@ -12,7 +12,6 @@ const methodOverride = require('method-override')
 const fs = require('fs')
 
 
-// se protéger des failles :
 require('sanitizer')
 var nodemailer = require('nodemailer')
 const request = require('request')
